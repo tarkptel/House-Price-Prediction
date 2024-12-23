@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  
 </head>
 <body>
     <h1>House Price Prediction - Feature Engineering Focus</h1>
@@ -57,16 +57,30 @@
         <li>Columns dropped due to high number of zeros: <code>PoolArea</code>, <code>3SsnPorch</code>, <code>ScreenPorch</code>, <code>EnclosedPorch</code>, <code>GarageYrBlt</code>, <code>BsmtFinSF2</code>, <code>MiscVal</code>, <code>LowQualFinSF</code>.</li>
         <li>Columns dropped due to high correlation: <code>GrLivArea</code>, <code>GarageCars</code>, <code>OverallQual</code>.</li>
     </ul>
+    <h4>Using Recursive Feature Elimination (RFE)</h4>
+    <p>
+        Recursive Feature Elimination (RFE) was used to identify and select the most important features for the model.
+        This technique involves iteratively fitting a model and removing the least important feature at each iteration until the desired number of features is reached.
+    </p>
+    <p>Benefits of using RFE in this project:</p>
+    <ul>
+        <li>Helped reduce dimensionality by eliminating irrelevant or redundant features.</li>
+        <li>Improved model performance by focusing on the most predictive features.</li>
+        <li>Provided insights into feature importance, aiding in the interpretation of the model.</li>
+    </ul>
+    <p>
+        RFE contributed significantly to identifying the optimal subset of features, leading to a simpler and more efficient model with better generalization on unseen data.
+    </p>
     <h3>3. Model Development</h3>
     <ul>
         <li>Split the data into training and testing sets.</li>
         <li>Trained multiple machine learning models, including:</li>
         <ul>
             <li>Linear Regression</li>
-            <li>SGDRegressor</li>
+            <li>SGDRegressorr</li>
             <li>Random Forest Regressor</li>
             <li>Gradient Boosting Regressor</li>
-            <li>XGBRegressor</li>
+            <li>XG Boost Regressor</li>
         </ul>
         <li>Tuned hyperparameters using RandomizedSearchCV.</li>
     </ul>
